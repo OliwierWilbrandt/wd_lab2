@@ -38,11 +38,69 @@ import sys
 # print('liczba a jest rowna {:.2f}, liczba b jest rowna {:d}'
 #       .format(a,b))
 
-a = input('Wprowadz liczbe: ')
-print(a)
-print(type(a))
-a = int(a)
-print(a*5)
+# a = input('Wprowadz liczbe: ')
+# print(a)
+# print(type(a))
+# a = int(a)
+# print(a*5)
+# print(type(a))
+
+# sys.stdout.write('Wprowadz liczbe')
+# b = sys.stdin.readline()
+# print(b)
+# print(type(b))
+
+# lista = [5, 6.6 , 34, 'a', 'b', [2, 3, 4], 'ab']
+# print(lista)
+# lista.append(67)
+# print(lista)
+# lista.insert(2, 'c')
+# print(lista)
+# lista.extend([20, 21, 22])
+# print(lista)
+# lista.pop()
+# print(lista)
+# lista.pop(2)
+# print(lista)
+# lista.remove([2, 3, 4])
+# print(lista)
+# del lista[1]
+# print(lista)
+# del lista
+# print(lista)
+# lista.reverse()
+# print(lista)
+# lista.sort()
+# print(lista)
+
+# slownik = {'klucz': 'wartosc', 1: 2, 'a' : 5, 4: 'b', 1:10}
+# print(slownik)
+# print(slownik[4])
+# slownik[6] = 45
+# print(slownik)
+# slownik.pop(1)
+# print(slownik)
+# print(slownik.keys())
+# print(slownik.values())
+# del slownik[6]
+
+a = 6
+b = 6
+
+if a > b:
+    print("a is graeter than b")
+elif a < b:
+    print("a is less than b")
+else:
+    print("a is equal to b")
+
+
+
+
+
+
+
+
 
 
 
