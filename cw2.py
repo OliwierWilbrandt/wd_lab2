@@ -133,15 +133,16 @@ import sys
 #         licznik +=1
 # else:
 #     print('licznik')
+
 licznik = 0
 lista = [1, 2, 3, 4, 5, 6 , 7]
 a = int(input())
 while licznik < len(lista):
-if (a-lista[licznik]) == 0:
-break
-licznik += 1
+    if (a-lista[licznik]) == 0:
+        break
+    licznik += 1
 else:
-print("liczba podana nie jest z listy")
+    print("liczba podana nie jest z listy")
 
 
 
