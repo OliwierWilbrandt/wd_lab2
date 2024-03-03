@@ -84,15 +84,71 @@ import sys
 # print(slownik.values())
 # del slownik[6]
 
-a = 6
-b = 6
+# a = 6
+# b = 6
+#
+# if a > b:
+#     print("a is graeter than b")
+# elif a < b:
+#     print("a is less than b")
+# else:
+#     print("a is equal to b")
 
-if a > b:
-    print("a is graeter than b")
-elif a < b:
-    print("a is less than b")
+# a = int (input())
+# b = int (input())
+# c = int (input())
+# d = int (input())
+#
+# if (a > b) & (c > d):
+#     print(a, c)
+# else:
+#     print(b, d)
+
+# for i in range(2, 8, 2):
+#     print(i)
+# else:
+#     print('koniec petli')
+
+# for i in lista:
+#     print(i)
+
+    # for i in range(0, 5):
+    #     for j in range(0, 5):
+    #         result = i+j
+    #         print(result)
+    #     print('')
+
+# licznik = 0
+# while licznik < len(lista):
+#     print(lista[licznik])
+#     licznik +=1
+# else:
+#     print('koniec petli')
+# licznik = 0
+# while licznik != 10:
+#     if licznik == 7:
+#         print(licznik)
+#         break
+#     else:
+#         licznik +=1
+# else:
+#     print('licznik')
+licznik = 0
+lista = [1, 2, 3, 4, 5, 6 , 7]
+a = int(input())
+while licznik < len(lista):
+if (a-lista[licznik]) == 0:
+break
+licznik += 1
 else:
-    print("a is equal to b")
+print("liczba podana nie jest z listy")
+
+
+
+
+
+
+
 
 
 
