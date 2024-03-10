@@ -11,6 +11,13 @@
 # print(l2)
 
 #Zad3
+# produkty = {"cukierki": "gramy", "ziemniaki": "kilogramy", "mleko": "litry", "maslo": "sztuki", "jablka": "sztuki"}
+# produkty_sztuki = [x for x, y in produkty.items() if y == "sztuki"]
+# print(produkty_sztuki)
+
+#Zad4
+
+
 
 
 
