@@ -36,14 +36,33 @@
 #         l6.append((x, y))
 # print(l6)
 
-s1 = {1: 2, 2: 3, 3: 4, 4: 5,}
-s2 = {}
-for key, value in s1.items():
-    s2[value] = key
-print(s1)
-print(s2)
-s3 = {v: k for k, v in s1.items()}
-print(s3)
+# s1 = {1: 2, 2: 3, 3: 4, 4: 5,}
+# s2 = {}
+# for key, value in s1.items():
+#     s2[value] = key
+# print(s1)
+# print(s2)
+# s3 = {v: k for k, v in s1.items()}
+# print(s3)
+import math
+def rownanie_kwadratowe(a, b, c):
+    delta = b ** 2 - 4 * a * c
+    if delta < 0:
+        print("Brak pierwiastkow")
+        return 0
+    elif delta == 0:
+        print("Jeden pierwiastek")
+        x = (-b) / (2 * a)
+        return x
+    elif delta > 0:
+        print("Dwa pierwiastki")
+        x1 = (-b + math.sqrt(delta)) / (2 * a)
+        x2 = (-b - math.sqrt(delta)) / (2 * a)
+        return x1, x2
+
+print(rownanie_kwadratowe(a=6, b=1, c=3))
+print(rownanie_kwadratowe(a=1, b=2, c=1))
+print(rownanie_kwadratowe(a=1, b=4, c=2))
 
 
 
