@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # s = pd.Series([1, 3, 5, np.nan, 6, 8])
 # print(s)
@@ -56,27 +57,79 @@ df = pd.DataFrame(data)
 # szukaj=['Belgia', 'Brasilia']
 # print(df.isin(szukaj))
 
-s['e']=15
-print(s.e)
-s['f']=16
-print(s)
-
-df.loc[3]= 'dodane'
-print(df)
+# s['e']=15
+# print(s.e)
+# s['f']=16
+# print(s)
+#
+# df.loc[3]= 'dodane'
+# print(df)
 df.loc[4]=['Polska', 'Warszawa', 38675467]
-print(df)
-
-new_df=df.drop([3])
-print(new_df)
-
-df.drop([3], inplace=True)
-print(df)
-
-
+# print(df)
+#
+# new_df=df.drop([3])
+# print(new_df)
+#
+# df.drop([3], inplace=True)
+# print(df)
+#
+#
 df['Kontynent']=['Europa','Azja',
                  'Ameryka Południowa', 'Europa']
+#
+# print(df)
+#
+# print(df.sort_values(by='Kraj'))
+# grouped=df.groupby(['Kontynent'])
+# print(grouped.get_group('Europa'))
+# print(df.groupby(['Kontynent']).agg({'Populacja':['sum']}))
+# print(df.groupby(['Kontynent']).agg('Populacja').sum())
+
+ts = pd.Series(np.random.randn(1000))
+ts = ts.cumsum()
+print(ts)
+ts.plot()
+plt.show()
+
 
 print(df)
+grupa = df.groupby(['Kontynent']).agg({'Populacja':['sum']})
+print(grupa)
+grupa.plot(kind='bar', xlabel='Kontynent', ylabel='Mld', rot=0,
+           legend=True, title='Populacja z podzialem na kontynenty')
+wykres = grupa.plot.bar()
+wykres.set_ylabel("Mld")
+wykres.set_xlabel('Kontynent')
+wykres.tick_params(axis='x', labelrotation=0)
+wykres.legend()
+wykres.set_title('Populacja z podzialem na kontynenty')
+# plt.xticks(rotation=0)
+plt.savefig('wykres.png')
+plt.show()
+
+
+df = pd.read_csv('dane.csv', header=0, sep=";",
+                 decimal=".")
+print(df)
+grupa = (df.groupby(['Imię i nazwisko']).
+         agg({'Wartość zamówienia':["sum"]}))
+grupa.plot(kind='pie', subplots=True, autopct='%.2f %%',
+           fontsize=20, figsize=(6,6), colors=['red', 'green'])
+# wykres = grupa.plot.pie(subplots=True,autopct='%.2f %%', fontsize=20, figsize=(6,6))
+
+plt.legend(loc="lower right")
+plt.title('Suma zamówienia dla sprzedawcy')
+plt.show()
+
+
+ts = pd.Series(np.random.randn(1000))
+ts = ts.cumsum()
+df = pd.DataFrame(ts, columns=['wartości'])
+print(df)
+df['Średnia krocząca'] = df.rolling(window=20).mean()
+df.plot()
+plt.legend()
+plt.show()
 
 
 
